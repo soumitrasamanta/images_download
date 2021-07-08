@@ -11,6 +11,7 @@ This repo contains three items:
 # Prerequisites
 - python >= 3.7
 - pandas
+- [opencv](https://pypi.org/project/opencv-python/)
 - [bing image downloader](https://github.com/soumitrasamanta/bing_image_downloader.git)
 - [text detector from image](https://github.com/arj7192/CRAFT-pytorch)
 
