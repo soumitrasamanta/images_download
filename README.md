@@ -16,7 +16,7 @@ This repo contains three items:
 - [text detector from image](https://github.com/arj7192/CRAFT-pytorch)
 
 
-# Usage:
+# Usage
 Set your key words at [images.py](images.py#L17). 
 ```bash
 python images.py
@@ -31,3 +31,8 @@ Filter out text images and duplicate urls (set paths and others at [clean.py](cl
 ```bash
 python clean.py
 ```
+
+# Disclaimer
+
+Please do not download or use any image that violates its copyright terms. 
+
