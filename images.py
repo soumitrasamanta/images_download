@@ -10,12 +10,13 @@ from bing_image_downloader import downloader
 from multiprocessing import Pool
 
 
-def image_download_parallel(query):
-    downloader.download(query, limit=10, timeout=30, verbose=False)
+def image_download_parallel(query, num_images):
+    downloader.download(query, limit=num_images, timeout=30, verbose=False)
 
     
 query = ['cat', 'dog', 'cow', 'lion', 'tiger']
+num_images = 5
 # multiple queries in parallel 
 if __name__ == '__main__':
     with Pool(len(query)) as p:
-        p.map(image_download_parallel, query)
+        p.starmap(image_download_parallel, [(q, num_images) for q in query])
