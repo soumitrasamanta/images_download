@@ -15,10 +15,11 @@ from input_output import *
 
 
 # combine images from all queries
+init_datapath = 'dataset/'
 query = ['cat', 'dog', 'cow', 'lion', 'tiger']
-output_datapath = create_folder('dataset/all/')
+output_datapath = create_folder(''.join([init_datapath, 'all/']))
 output_filename = 'images_source_info.xlsx'
-decimal_place = 6
+decimal_place = 6 # for filename
 count_img = 1# global image count
 dict_image_source = OrderedDict({
     'key_word': [], 
@@ -27,7 +28,7 @@ dict_image_source = OrderedDict({
 })
 
 for i, q in enumerate(query):
-    input_datapath = ''.join(['dataset/', q.replace(' ', '_'), '/'])
+    input_datapath = ''.join([init_datapath, q.replace(' ', '_'), '/'])
     input_filename = ''.join([q.replace(' ', '_'), '_images_source_info.xlsx'])
     # read images source info file
     df_image_source = pd.read_excel(''.join([input_datapath, input_filename]))
